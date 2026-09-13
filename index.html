@@ -1,7 +1,7 @@
 <!doctype html><html lang="pt-br"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Impulso Digital</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%88%3C/text%3E%3C/svg%3E">
 <meta name="description" content="Criação de sites profissionais com agendamento online. Seu cliente marca sozinho, você recebe tudo organizado. Entrega em 7 dias.">
 <meta property="og:title" content="Impulso Digital — Sites com Agendamento Online">
 <meta property="og:description" content="Sites profissionais com agenda que trabalha por você. Veja exemplos e peça o seu.">
@@ -202,6 +202,31 @@
   .faq .ans{padding:0 22px 20px;color:var(--soft);font-size:.98rem;line-height:1.6}
   @media(max-width:860px){.trust{grid-template-columns:1fr}}
 
+  /* planos */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px;align-items:stretch}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 26px;display:flex;flex-direction:column;position:relative;transition:transform .2s,border-color .2s}
+  .plan:hover{transform:translateY(-4px)}
+  .plan.pop{border-color:var(--a1);box-shadow:0 34px 80px -46px rgba(59,130,246,.7)}
+  .plan .ptag{position:absolute;top:-12px;left:26px;background:var(--grad);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.05em;padding:7px 14px;border-radius:999px;text-transform:uppercase;font-family:var(--sans)}
+  .plan .ptag.free{background:rgba(58,192,106,.16);border:1px solid rgba(58,192,106,.55);color:#5bd39c}
+  .plan h3{font-family:var(--disp);font-size:1.4rem;margin-bottom:6px}
+  .plan .pdesc{color:var(--muted);font-size:.92rem;line-height:1.5;margin-bottom:20px}
+  .plan .price{display:flex;align-items:baseline;gap:7px;font-family:var(--disp)}
+  .plan .price b{font-size:2.3rem;font-weight:800;line-height:1;color:var(--cream)}
+  .plan .price .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .plan .price small{color:var(--muted);font-size:.88rem;font-weight:600;font-family:var(--sans)}
+  .plan .psub{color:var(--soft);font-size:.9rem;margin-top:9px;line-height:1.45}
+  .plan ul{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:11px}
+  .plan li{display:flex;gap:10px;color:var(--soft);font-size:.93rem;line-height:1.4}
+  .plan li svg{width:18px;height:18px;color:var(--a1);flex:none;margin-top:1px}
+  .tier{margin-top:18px;border-top:1px dashed var(--line2);padding-top:16px;display:flex;flex-direction:column;gap:9px}
+  .tier .tr{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:.92rem;color:var(--soft)}
+  .tier .tr b{color:var(--cream);font-weight:700;white-space:nowrap}
+  .plan .btn{margin-top:24px;width:100%;justify-content:center}
+  .plan .pfill{margin-top:auto}
+  .plans-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:22px}
+  @media(max-width:900px){.plans{grid-template-columns:1fr}}
+
   /* cursor glow */
   .glow{position:fixed;left:0;top:0;width:360px;height:360px;border-radius:50%;pointer-events:none;z-index:5;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(59,130,246,.14),transparent 60%);mix-blend-mode:screen;opacity:0;transition:opacity .4s}
   /* experimente */
@@ -239,10 +264,11 @@
 </style></head><body>
 
 <header class="hdr" id="hdr"><div class="wrap">
-  <a href="#" class="brand"><span class="mk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></span>Impulso Digital</a>
+  <a href="#" class="brand"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>Impulso Digital</a>
   <nav class="nav">
     <a class="l" href="#trabalhos">Trabalhos</a>
     <a class="l" href="#recursos">Recursos</a>
+    <a class="l" href="#precos">Preços</a>
     <a class="l" href="#confianca">Dúvidas</a>
     <a class="btn btn-a" href="https://wa.me/5514997617954?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Impulso%20Digital%20e%20quero%20um%20site%20com%20agenda%20pro%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Falar no WhatsApp</a>
   </nav>
@@ -393,6 +419,47 @@
   </div>
 </div></section>
 
+<section class="sec" id="precos" style="padding-top:0"><div class="wrap">
+  <div class="head center reveal"><p class="eyebrow">Planos e preços</p><h2>Escolha como <span class="grad">começar.</span></h2><p>Três formas de ter seu site — do jeito que cabe no seu momento. Sem letra miúda.</p></div>
+  <div class="plans">
+  <div class="plan reveal">
+    <h3>Site comum</h3>
+    <p class="pdesc">Presença profissional na internet, com a cara do seu negócio.</p>
+    <div class="price"><b>R$299<small>,90</small></b><small>criação</small></div>
+    <div class="psub">+ R$69,90/mês · suporte e manutenção</div>
+    <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Design premium sob medida</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Perfeito no celular</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Seu domínio e sua marca</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Otimizado pra aparecer no Google</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Ajustes e suporte inclusos</span></li></ul>
+    <div class="pfill"></div>
+    <a class="btn btn-g" href="https://wa.me/5514997617954?text=Ol%C3%A1%21%20Quero%20um%20site%20comum%20%28institucional%29%20pro%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site</a>
+  </div>
+  <div class="plan pop reveal" style="--i:1">
+    <span class="ptag">Mais escolhido</span>
+    <h3>Site de agendamento</h3>
+    <p class="pdesc">Site + agenda que marca sozinha e organiza tudo pra você.</p>
+    <div class="price"><b class="g">R$399<small>,90</small></b><small>criação</small></div>
+    <div class="psub">+ assinatura mensal conforme o nº de profissionais (a partir de R$69,90/mês)</div>
+    <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Tudo do site comum</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Agenda online, 24h por dia</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Lembrete automático no WhatsApp</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Painel de agendamentos simples</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Menos faltas, mais clientes</span></li></ul>
+    <div class="pfill"></div>
+    <a class="btn btn-a" href="https://wa.me/5514997617954?text=Ol%C3%A1%21%20Quero%20um%20site%20de%20agendamento%20pro%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero agenda no meu site
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="plan reveal" style="--i:2">
+    <span class="ptag free">1 mês grátis</span>
+    <h3>Site pronto</h3>
+    <p class="pdesc">Comece sem pagar criação. Teste 1 mês grátis e só continue se gostar.</p>
+    <div class="price"><b>R$0<small></small></b><small>de criação</small></div>
+    <div class="psub">Só a assinatura mensal, pelo nº de profissionais:</div>
+    <div class="tier">
+      <div class="tr"><span>Individual</span><b>R$69,90/mês</b></div>
+      <div class="tr"><span>Até 3 profissionais</span><b>R$89,90/mês</b></div>
+      <div class="tr"><span>De 3 a 10 profissionais</span><b>R$129,90/mês</b></div>
+      <div class="tr"><span>Acima de 10</span><b>R$159,90/mês</b></div>
+    </div>
+    <div class="pfill"></div>
+    <a class="btn btn-g" href="https://wa.me/5514997617954?text=Ol%C3%A1%21%20Quero%20come%C3%A7ar%20com%20o%20site%20pronto%20na%20assinatura%20%281%20m%C3%AAs%20gr%C3%A1tis%29." target="_blank" rel="noopener">Começar grátis</a>
+  </div></div>
+  <p class="plans-note">Assinaturas no plano anual (12 meses). A gente alinha tudo certinho no WhatsApp, sem pegadinha.</p>
+</div></section>
+
 <section class="sec" id="confianca" style="padding-top:0"><div class="wrap">
   <div class="head center reveal"><p class="eyebrow">Sem risco</p><h2>Pode confiar. <span class="grad">Você aprova antes de pagar.</span></h2><p>Sei que na internet a gente desconfia — e faz bem. Por isso funciona assim, sem pegadinha.</p></div>
   <div class="trust">
@@ -408,7 +475,7 @@
   </div>
   <div class="faqs">
     <details class="faq reveal"><summary>É seguro? Como sei que não é golpe?<span class="pl">+</span></summary><div class="ans">Pergunta justa. Você não paga nada pra ver: eu monto seu site e te mostro pronto, funcionando de verdade. Só depois que você aprovar é que a gente fecha. E se preferir, marco um horário e te mostro o sistema ao vivo, dividindo a tela — assim você vê que é real antes de qualquer coisa.</div></details>
-    <details class="faq reveal"><summary>Quanto custa?<span class="pl">+</span></summary><div class="ans">A criação do site fica a partir de R$399,90. A manutenção (hospedagem, ajustes e suporte) é R$99,90 por mês. Fecho o valor exato depois de entender o que o seu negócio precisa — sem surpresa depois.</div></details>
+    <details class="faq reveal"><summary>Quanto custa?<span class="pl">+</span></summary><div class="ans">Tem três formas de começar: <b>site comum</b> por R$299,90 + R$69,90/mês; <b>site de agendamento</b> por R$399,90 + assinatura conforme o nº de profissionais (a partir de R$69,90/mês); ou o <b>site pronto</b> só na assinatura, com 1 mês grátis (de R$69,90 a R$159,90/mês). A gente vê junto qual faz mais sentido pro seu negócio — sem surpresa depois.</div></details>
     <details class="faq reveal"><summary>E se eu não gostar do resultado?<span class="pl">+</span></summary><div class="ans">A gente ajusta até ficar do seu jeito. E como você só paga depois de aprovar, não tem risco de pagar por algo que não curtiu.</div></details>
     <details class="faq reveal"><summary>Preciso entender de tecnologia?<span class="pl">+</span></summary><div class="ans">Não precisa. Você me conta do seu negócio pelo WhatsApp e eu cuido de tudo. O painel pra ver os agendamentos é simples, pensado pra usar direto do celular.</div></details>
     <details class="faq reveal"><summary>Quanto tempo leva pra ficar pronto?<span class="pl">+</span></summary><div class="ans">Normalmente 7 dias pra colocar no ar, contando de quando você me passa as informações e as fotos do seu negócio.</div></details>
@@ -424,14 +491,14 @@
     <p>Me chama no WhatsApp e conta do seu negócio. Eu te mostro como fica — sem compromisso.</p>
     <a class="btn btn-a" href="https://wa.me/5514997617954?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Impulso%20Digital%20e%20quero%20um%20site%20com%20agenda%20pro%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Falar no WhatsApp
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2"/></svg></a>
-    <p class="pricehint">A partir de <b>R$399,90</b> na criação · manutenção R$99,90/mês</p>
+    <p class="pricehint">A partir de <b>R$299,90</b> · ou comece só com a assinatura, <b>1 mês grátis</b></p>
   </div>
 </div></div></section>
 
 <footer><div class="wrap">
   <div class="fgrid">
     <div class="fcol">
-      <a href="#" class="brand"><span class="mk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg></span>Impulso Digital</a>
+      <a href="#" class="brand"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>Impulso Digital</a>
       <p class="fabout">Sites profissionais com agendamento online. Seu cliente marca sozinho, você recebe tudo organizado — com a sua marca.</p>
       <span class="floc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Toledo — PR · atende todo o Brasil, 100% online</span>
     </div>
@@ -439,7 +506,7 @@
       <h4>Navegar</h4>
       <a class="fl" href="#trabalhos">Trabalhos</a>
       <a class="fl" href="#recursos">Recursos</a>
-      <a class="fl" href="#como">Como funciona</a>
+      <a class="fl" href="#precos">Preços</a>
       <a class="fl" href="#confianca">Dúvidas</a>
     </div>
     <div class="fcol">
